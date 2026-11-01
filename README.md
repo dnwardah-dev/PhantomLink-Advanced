@@ -52,20 +52,32 @@ Developed as a full-stack cybersecurity engineering portfolio project.</WritingB
 ### Digital Underworld
 ![Digital Underworld](docs/screenshots/01-home.png)
 
+The interactive landing page introduces PhantomLink through an immersive, cybersecurity-inspired visual experience.
+
 ### Investigation Lab
 ![Investigation Lab](docs/screenshots/02-investigation.png)
+
+The main investigation workspace allows users to submit URLs, review risk assessments, and explore explainable security findings.
 
 ### Evidence Intelligence
 ![Evidence Intelligence](docs/screenshots/03-evidence.png)
 
+This page presents investigation evidence, supporting indicators, and detailed analysis to help users understand observed URL characteristics.
+
 ### DNS Intelligence
 ![DNS Intelligence](docs/screenshots/04-dns.png)
+
+Displays DNS-related information and investigation insights to provide additional context about analyzed domains.
 
 ### Investigation Archive
 ![Investigation Archive](docs/screenshots/05-archive.png)
 
+Provides access to historical investigation records with session-based separation of user data.
+
 ### Analytics Dashboard
 ![Analytics Dashboard](docs/screenshots/06-analytics.png)
+
+Visualizes investigation statistics and risk-related summaries through an interactive analytics interface.
 
 ## Risk Classification Testing
 
@@ -75,6 +87,8 @@ not verified phishing verdicts.
 
 ### LOW RISK
 
+Demonstrates a URL investigation with few or no suspicious heuristic indicators. A LOW RISK result does not guarantee website safety.
+
 ![LOW RISK - Part 1](docs/screenshots/testing/low-01.png)
 
 ![LOW RISK - Part 2](docs/screenshots/testing/low-02.png)
@@ -82,6 +96,8 @@ not verified phishing verdicts.
 ![LOW RISK - Part 3](docs/screenshots/testing/low-03.png)
 
 ### MEDIUM RISK
+
+Demonstrates an investigation where multiple observable risk indicators warrant further review. The classification is based on heuristic rules.
 
 ![MEDIUM RISK - Part 1](docs/screenshots/testing/medium-01.png)
 
@@ -92,6 +108,8 @@ not verified phishing verdicts.
 ![MEDIUM RISK - Part 4](docs/screenshots/testing/medium-04.png)
 
 ### HIGH RISK
+
+Demonstrates an investigation with stronger or accumulated heuristic indicators. This classification does not independently confirm phishing.
 
 ![HIGH RISK - Part 1](docs/screenshots/testing/high-01.png)
 
