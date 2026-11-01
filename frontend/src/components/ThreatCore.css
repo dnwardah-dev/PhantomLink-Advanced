@@ -1,0 +1,228 @@
+﻿.threat-core {
+  --threat-color: #9b7bff;
+  position: relative;
+  overflow: hidden;
+  min-height: 440px;
+  padding: 24px;
+  border: 1px solid #44365f;
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at 50% 48%, #34205280, transparent 58%),
+    linear-gradient(145deg, #151226, #090d19);
+  box-shadow: inset 0 0 65px #8b5cf610, 0 18px 45px #0005;
+}
+
+.threat-core::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#a78bfa09 1px, transparent 1px),
+    linear-gradient(90deg, #a78bfa09 1px, transparent 1px);
+  background-size: 30px 30px;
+  pointer-events: none;
+}
+
+.core-topline,
+.core-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  color: #aaa1c5;
+}
+
+.core-topline > span:first-child {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d8c6ff;
+}
+
+.core-signal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b6ee91;
+}
+
+.core-signal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a3e635;
+  box-shadow: 0 0 12px #a3e635;
+}
+
+.core-stage {
+  position: relative;
+  height: 340px;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.core-glow {
+  position: absolute;
+  width: 290px;
+  height: 290px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--threat-color), transparent 68%);
+  filter: blur(45px);
+  opacity: .18;
+}
+
+.core-crosshair {
+  position: absolute;
+  opacity: .22;
+  background: linear-gradient(90deg, transparent, var(--threat-color), transparent);
+}
+
+.core-crosshair-h {
+  height: 1px;
+  width: min(100%, 390px);
+}
+
+.core-crosshair-v {
+  width: 1px;
+  height: 300px;
+  background: linear-gradient(transparent, var(--threat-color), transparent);
+}
+
+.core-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.core-ring-outer {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed var(--threat-color);
+  opacity: .55;
+  box-shadow: 0 0 35px #8b5cf620;
+}
+
+.core-ring-middle {
+  width: 246px;
+  height: 246px;
+  border: 3px solid transparent;
+  border-top-color: var(--threat-color);
+  border-bottom-color: #22d3ee;
+  box-shadow: 0 0 22px #8b5cf630;
+}
+
+.core-ring-inner {
+  width: 190px;
+  height: 190px;
+  border: 1px solid var(--threat-color);
+  border-left-color: transparent;
+  border-right-color: #22d3ee;
+  opacity: .8;
+}
+
+.core-center {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 7px;
+  color: var(--threat-color);
+  background: radial-gradient(circle at 50% 35%, #29203e, #0d1020 75%);
+  border: 1px solid var(--threat-color);
+  box-shadow:
+    inset 0 0 32px #8b5cf625,
+    0 0 36px #8b5cf635;
+  z-index: 1;
+}
+
+.core-center strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  color: #fff;
+}
+
+.core-center small {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--threat-color);
+}
+
+.core-orbit-dot {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #22d3ee;
+  box-shadow: 0 0 16px #22d3ee;
+  animation: coreOrbit 9s linear infinite;
+}
+
+@keyframes coreOrbit {
+  from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+}
+
+.core-footer {
+  border-top: 1px solid #ffffff12;
+  padding-top: 17px;
+  font-size: 9px;
+  color: #77718f;
+}
+
+@media (max-width: 600px) {
+  .threat-core {
+    padding: 18px;
+    min-height: 380px;
+  }
+
+  .core-stage {
+    height: 300px;
+  }
+
+  .core-ring-outer {
+    width: 255px;
+    height: 255px;
+  }
+
+  .core-ring-middle {
+    width: 210px;
+    height: 210px;
+  }
+
+  .core-ring-inner {
+    width: 165px;
+    height: 165px;
+  }
+
+  .core-center {
+    width: 130px;
+    height: 130px;
+  }
+
+  .core-orbit-dot {
+    animation-name: coreOrbitMobile;
+  }
+
+  @keyframes coreOrbitMobile {
+    from { transform: rotate(0deg) translateX(127px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(127px) rotate(-360deg); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .core-orbit-dot {
+    animation: none;
+    transform: translateX(150px);
+  }
+}

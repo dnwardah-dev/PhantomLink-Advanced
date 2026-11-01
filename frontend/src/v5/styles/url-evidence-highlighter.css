@@ -1,0 +1,161 @@
+﻿.v5-url-map {
+  margin-top: 32px;
+  padding: clamp(22px, 3vw, 36px);
+  border: 1px solid rgba(97, 202, 226, 0.25);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.08), transparent 45%),
+    linear-gradient(145deg, #121629, #0b101e);
+  color: #eef0ff;
+}
+
+.v5-url-map-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.v5-url-map-kicker {
+  color: #89dbe9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.v5-url-map-heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: clamp(19px, 2.5vw, 27px);
+  letter-spacing: -0.5px;
+}
+
+.v5-url-map-heading h3 svg {
+  color: #76dce9;
+}
+
+.v5-url-map-heading p {
+  max-width: 650px;
+  color: #9ba5c3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.v5-url-map-count {
+  padding: 9px 12px;
+  border: 1px solid rgba(105, 222, 235, 0.25);
+  border-radius: 8px;
+  background: rgba(59, 199, 218, 0.07);
+  color: #82e5ed;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.v5-url-map-hostname {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 22px 18px;
+  border: 1px solid rgba(127, 136, 182, 0.24);
+  border-radius: 12px;
+  background: rgba(5, 9, 21, 0.8);
+  font-family: Consolas, "Courier New", monospace;
+  font-size: clamp(13px, 1.6vw, 18px);
+  line-height: 2;
+  overflow-wrap: anywhere;
+}
+
+.v5-url-map-character {
+  display: inline-block;
+  white-space: pre;
+  color: #c2cce6;
+  border-radius: 3px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.v5-url-map-character.is-highlighted {
+  background: rgba(48, 213, 232, 0.25);
+  color: #7cf3ff;
+  box-shadow: 0 0 12px rgba(48, 213, 232, 0.22);
+  font-weight: 800;
+}
+
+.v5-url-map-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.v5-url-map-controls button {
+  padding: 12px 15px;
+  border: 1px solid rgba(144, 127, 234, 0.3);
+  border-radius: 9px;
+  background: rgba(116, 96, 211, 0.08);
+  color: #c5baff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.v5-url-map-controls button:hover,
+.v5-url-map-controls button[aria-pressed="true"] {
+  border-color: #68d8e8;
+  background: rgba(48, 213, 232, 0.13);
+  color: #9df2fa;
+}
+
+.v5-url-map-controls button:focus-visible {
+  outline: 2px solid #81dfef;
+  outline-offset: 3px;
+}
+
+.v5-url-map-empty {
+  margin-top: 17px;
+  color: #aab5d0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.v5-url-map-disclaimer {
+  margin: 23px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(127, 136, 182, 0.16);
+  color: #9caac6;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+  .v5-url-map {
+    padding: 20px 15px;
+  }
+
+  .v5-url-map-hostname {
+    padding: 15px 12px;
+    font-size: 13px;
+  }
+
+  .v5-url-map-controls button {
+    font-size: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v5-url-map-character,
+  .v5-url-map-controls button {
+    transition: none;
+  }
+}

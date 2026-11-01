@@ -1,0 +1,12 @@
+{
+  "source": "https://tranco-list.eu/top-1m.csv.zip",
+  "retrieved_at": "2026-10-31T02:38:30.601776+00:00",
+  "samples": 1000,
+  "label": "legitimate_candidate",
+  "limitations": [
+    "Popular domains are not guaranteed legitimate.",
+    "HTTPS URLs are constructed for offline testing.",
+    "No website content was fetched.",
+    "Requires label validation before accuracy claims."
+  ]
+}

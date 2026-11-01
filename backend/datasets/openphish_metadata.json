@@ -1,0 +1,13 @@
+{
+  "source": "https://openphish.com/feed.txt",
+  "retrieved_at": "2026-10-31T02:37:18.411863+00:00",
+  "total_samples": 300,
+  "label": 1,
+  "label_meaning": "Listed in OpenPhish Community Feed",
+  "limitations": [
+    "Feed labels may contain errors.",
+    "Samples may become outdated.",
+    "No individual phishing URLs were visited.",
+    "Usage is subject to provider terms."
+  ]
+}

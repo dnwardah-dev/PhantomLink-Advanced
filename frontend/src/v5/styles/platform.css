@@ -1,0 +1,250 @@
+﻿.v5-platform {
+  --sidebar-width: 268px;
+  display: flex;
+  min-height: 100vh;
+  background: #050710;
+  color: #f4f7ff;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+}
+
+.v5-platform * {
+  box-sizing: border-box;
+}
+
+.v5-sidebar {
+  position: sticky;
+  top: 0;
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-width);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 34px 17px 22px;
+  border-right: 1px solid #2a3049;
+  background:
+    radial-gradient(ellipse at 0% 0%, #35245d35, transparent 60%),
+    #0b0e1b;
+  z-index: 30;
+}
+
+.v5-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 12px 35px;
+  color: white;
+  text-decoration: none;
+}
+
+.v5-sidebar-brand > svg {
+  flex-shrink: 0;
+  color: #65e8f4;
+  filter: drop-shadow(0 0 12px #65e8f455);
+}
+
+.v5-sidebar-brand > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.v5-sidebar-brand strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  letter-spacing: -1px;
+}
+
+.v5-sidebar-brand small {
+  color: #8692b0;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.v5-sidebar-section {
+  padding: 15px 14px;
+  color: #71809e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  border-top: 1px solid #ffffff12;
+}
+
+.v5-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.v5-sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px 14px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #9ca9c4;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition:
+    color .2s,
+    background .2s,
+    border-color .2s;
+}
+
+.v5-sidebar-link svg {
+  flex-shrink: 0;
+}
+
+.v5-sidebar-link:hover {
+  color: #f4f7ff;
+  background: #ffffff0b;
+}
+
+.v5-sidebar-link.active {
+  color: #91f2ff;
+  border-color: #65e8f43b;
+  background: linear-gradient(90deg, #65e8f41d, #ad91ff0b);
+  box-shadow: inset 3px 0 #65e8f4;
+}
+
+.v5-sidebar-link.active svg {
+  filter: drop-shadow(0 0 8px #65e8f477);
+}
+
+.v5-sidebar-bottom {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-top: auto;
+  padding: 20px 12px 0;
+  border-top: 1px solid #ffffff17;
+  color: #75e5ca;
+}
+
+.v5-sidebar-bottom > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.v5-sidebar-bottom strong {
+  font-size: 10px;
+  letter-spacing: .9px;
+}
+
+.v5-sidebar-bottom small {
+  color: #8291ac;
+  font-size: 9px;
+  letter-spacing: .5px;
+}
+
+.v5-platform-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.v5-platform-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  min-height: 73px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid #252d46;
+  background: #090d19e8;
+  backdrop-filter: blur(20px);
+  color: #8694b2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+}
+
+.v5-platform-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #89edcc;
+  white-space: nowrap;
+}
+
+.v5-platform-main {
+  min-height: calc(100vh - 73px);
+  background:
+    radial-gradient(ellipse at 80% 0%, #30205c29, transparent 50%),
+    #070b15;
+}
+
+@media (max-width: 900px) {
+  .v5-platform {
+    flex-direction: column;
+  }
+
+  .v5-sidebar {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    padding: 17px;
+    border-right: none;
+    border-bottom: 1px solid #2a3049;
+  }
+
+  .v5-sidebar-brand {
+    padding-bottom: 16px;
+  }
+
+  .v5-sidebar-section,
+  .v5-sidebar-bottom {
+    display: none;
+  }
+
+  .v5-sidebar-nav {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    margin: 0;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+
+  .v5-sidebar-link {
+    flex-shrink: 0;
+    padding: 12px;
+  }
+
+  .v5-platform-topbar {
+    min-height: 58px;
+    padding: 0 20px;
+  }
+
+  .v5-platform-main {
+    min-height: calc(100vh - 58px);
+  }
+}
+
+@media (max-width: 550px) {
+  .v5-platform-topbar {
+    font-size: 8px;
+    letter-spacing: .5px;
+  }
+
+  .v5-sidebar-brand strong {
+    font-size: 19px;
+  }
+
+  .v5-sidebar-link {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v5-sidebar-link {
+    transition: none;
+  }
+}

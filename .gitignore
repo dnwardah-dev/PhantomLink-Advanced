@@ -1,0 +1,66 @@
+﻿# Environment variables and secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache and tests
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Node.js
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Local reports and temporary files
+test-results/
+playwright-report/
+*.log
+*.tmp
+*.bak
+backups/
+frontend-security-audit.json
+
+# Local screenshots and test artifacts
+underworld-before-drag.png
+underworld-after-drag.png
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Source code backups
+*.backup
+*.backup_*
+*_backup_*
+*.backup.*
+*.bak
+
+# Generated evaluation data
+backend/datasets/processed/
+
+# Local test outputs
+.pytest_cache/
+test-results/
+playwright-report/
+secret-scan-local.json

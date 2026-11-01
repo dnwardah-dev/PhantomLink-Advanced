@@ -1,0 +1,280 @@
+.v5-graph-panel {
+  position: relative;
+  margin-top: 32px;
+  padding: 28px;
+  border: 1px solid rgba(101, 232, 244, 0.27);
+  border-radius: 22px;
+  background:
+    radial-gradient(ellipse at 50% 15%, #38276545, transparent 65%),
+    linear-gradient(145deg, #101628, #070b15);
+  box-shadow: 0 25px 75px #00000045;
+  overflow: hidden;
+}
+
+.v5-graph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 23px;
+}
+
+.v5-graph-header span {
+  color: #e6e4ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.v5-graph-header small {
+  color: #6ee6ee;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.v5-graph-canvas {
+  height: 510px;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #333b61;
+  border-radius: 15px;
+  background:
+    radial-gradient(circle at center, #22204665, transparent 65%),
+    #080d1b;
+}
+
+.v5-graph-canvas .react-flow__node {
+  box-shadow: 0 7px 24px #00000060;
+  text-align: center;
+}
+
+.v5-graph-canvas .react-flow__edge-text {
+  font-size: 10px;
+}
+
+.v5-graph-canvas .react-flow__controls {
+  border: 1px solid #38415d;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.v5-graph-canvas .react-flow__controls-button {
+  background: #192139;
+  color: #e0e7fa;
+  border-bottom-color: #38415d;
+}
+
+.v5-graph-canvas .react-flow__controls-button:hover {
+  background: #30395b;
+}
+
+.v5-graph-canvas .react-flow__controls-button svg {
+  fill: currentColor;
+}
+
+.v5-graph-canvas .react-flow__minimap {
+  border: 1px solid #38415d;
+  border-radius: 9px;
+  background: #11172b;
+}
+
+.v5-graph-note {
+  margin: 18px 0 0;
+  color: #8d9ab6;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .v5-graph-panel {
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .v5-graph-canvas {
+    height: 420px;
+  }
+
+  .v5-graph-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.v5-node-inspector {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #655698;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #1b1d37, #101729);
+  color: #f4f7ff;
+}
+
+.v5-node-inspector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.v5-node-inspector-header strong {
+  color: #c5b6ff;
+  font-size: 12px;
+  letter-spacing: 1.4px;
+}
+
+.v5-node-inspector-header button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #485475;
+  border-radius: 8px;
+  background: #20283e;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.v5-node-inspector > span {
+  display: block;
+  margin-top: 15px;
+  color: #7ce8f2;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.v5-node-inspector > p {
+  margin: 7px 0;
+  color: #c2cde5;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+
+/* ==========================================
+   V5 NODE INTELLIGENCE - PREMIUM GRID
+   ========================================== */
+
+.v5-node-inspector {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 38px;
+  row-gap: 8px;
+  padding: 28px 32px;
+  background:
+    radial-gradient(
+      ellipse at 100% 0%,
+      rgba(101, 232, 244, 0.06),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #191d35, #0e1425);
+}
+
+.v5-node-inspector-header {
+  grid-column: 1 / -1;
+  margin-bottom: 13px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #ffffff19;
+}
+
+.v5-node-inspector > span {
+  margin-top: 16px;
+}
+
+.v5-node-inspector > p {
+  margin: 4px 0 10px;
+  line-height: 1.75;
+}
+
+.v5-node-inspector > span,
+.v5-node-inspector > p {
+  grid-column: 1 / -1;
+}
+
+/* Pair each information label with its value */
+.v5-node-inspector > span {
+  grid-column: 1;
+}
+
+.v5-node-inspector > span + p {
+  grid-column: 2;
+  align-self: center;
+  padding: 13px 17px;
+  border: 1px solid #333d59;
+  border-radius: 10px;
+  background: #111b30;
+  overflow-wrap: anywhere;
+}
+
+.v5-node-inspector > span + p + p {
+  grid-column: 2;
+  line-height: 1.8;
+}
+
+.v5-node-inspector > span + p + p + p {
+  grid-column: 2;
+}
+
+.v5-node-inspector-header button:hover {
+  border-color: #65e8f4;
+  color: #65e8f4;
+}
+
+@media (max-width: 760px) {
+  .v5-node-inspector {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    row-gap: 4px;
+  }
+
+  .v5-node-inspector > span,
+  .v5-node-inspector > span + p,
+  .v5-node-inspector > span + p + p,
+  .v5-node-inspector > span + p + p + p {
+    grid-column: 1;
+  }
+
+  .v5-node-inspector > span + p {
+    margin-bottom: 10px;
+  }
+}
+/* =====================================
+   PHANTOMLINK V5 - GRAPH VISUAL UPGRADE
+   ===================================== */
+
+.v5-graph-canvas .react-flow__node {
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    filter 0.2s ease;
+}
+
+.v5-graph-canvas .react-flow__node:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 24px rgba(173, 145, 255, 0.3);
+}
+
+.v5-graph-canvas .react-flow__node.selected {
+  outline: 2px solid #e2d6ff;
+  outline-offset: 4px;
+  box-shadow:
+    0 0 16px rgba(173, 145, 255, 0.45),
+    0 0 36px rgba(101, 232, 244, 0.15);
+}
+
+.v5-graph-canvas .react-flow__edge-path {
+  stroke-width: 1.8;
+}
+
+.v5-graph-canvas .react-flow__node:focus-visible {
+  outline: 2px solid #65e8f4;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v5-graph-canvas .react-flow__node {
+    transition: none;
+  }
+}

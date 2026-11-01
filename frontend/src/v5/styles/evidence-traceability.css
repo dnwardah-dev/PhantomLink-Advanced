@@ -1,0 +1,182 @@
+﻿.v5-trace-panel {
+  margin-top: 32px;
+  padding: clamp(22px, 3vw, 36px);
+  border: 1px solid rgba(139, 116, 245, 0.26);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at top right, rgba(113, 82, 222, 0.11), transparent 45%),
+    linear-gradient(145deg, #131629, #0c101d);
+  color: #eef0ff;
+}
+
+.v5-trace-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.v5-trace-kicker {
+  color: #a59af3;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.v5-trace-heading h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  font-size: clamp(19px, 2.5vw, 27px);
+  letter-spacing: -0.5px;
+}
+
+.v5-trace-heading h3 svg {
+  color: #9a8df7;
+}
+
+.v5-trace-heading p {
+  max-width: 650px;
+  color: #9ba5c3;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.v5-trace-counter {
+  padding: 9px 12px;
+  border: 1px solid rgba(105, 222, 235, 0.25);
+  border-radius: 8px;
+  color: #82e5ed;
+  background: rgba(59, 199, 218, 0.07);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.v5-trace-list {
+  display: grid;
+  gap: 12px;
+}
+
+.v5-trace-item {
+  overflow: hidden;
+  border: 1px solid rgba(127, 136, 182, 0.18);
+  border-radius: 12px;
+  background: rgba(12, 17, 33, 0.75);
+}
+
+.v5-trace-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 65px;
+  padding: 17px 20px;
+  border: 0;
+  color: #eef0ff;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.v5-trace-toggle:hover {
+  background: rgba(135, 113, 233, 0.09);
+}
+
+.v5-trace-toggle:focus-visible {
+  outline: 2px solid #81dfef;
+  outline-offset: -3px;
+}
+
+.v5-trace-item-name,
+.v5-trace-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.v5-trace-item-name {
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.v5-trace-item-name svg {
+  flex-shrink: 0;
+  color: #ab99fb;
+}
+
+.v5-trace-meta {
+  flex-shrink: 0;
+  color: #8edce7;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.v5-trace-meta svg {
+  transition: transform 0.2s ease;
+}
+
+.v5-trace-rotated {
+  transform: rotate(180deg);
+}
+
+.v5-trace-detail {
+  padding: 18px 20px;
+  border-top: 1px solid rgba(127, 136, 182, 0.18);
+  background: rgba(7, 11, 23, 0.45);
+}
+
+.v5-trace-detail p {
+  margin: 0 0 11px;
+  color: #aab5d0;
+  font-size: 12px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.v5-trace-detail p:last-child {
+  margin-bottom: 0;
+}
+
+.v5-trace-detail strong {
+  color: #e7e7ff;
+}
+
+.v5-trace-empty {
+  padding: 22px;
+  border: 1px dashed rgba(127, 136, 182, 0.3);
+  border-radius: 10px;
+  color: #abb5ce;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 650px) {
+  .v5-trace-panel {
+    padding: 20px 15px;
+  }
+
+  .v5-trace-toggle {
+    padding: 16px 12px;
+    gap: 10px;
+  }
+
+  .v5-trace-meta {
+    gap: 6px;
+  }
+
+  .v5-trace-item-name {
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v5-trace-meta svg {
+    transition: none;
+  }
+}
