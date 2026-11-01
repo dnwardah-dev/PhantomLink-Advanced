@@ -44,3 +44,71 @@ Development Status
 Local cybersecurity portfolio prototype.
 Author
 Developed as a full-stack cybersecurity engineering portfolio project.</WritingBlock>
+
+<!-- PHANTOMLINK GALLERY START -->
+
+## Application Screenshots
+
+### Digital Underworld
+![Digital Underworld](docs/screenshots/01-home.png)
+
+### Investigation Lab
+![Investigation Lab](docs/screenshots/02-investigation.png)
+
+### Evidence Intelligence
+![Evidence Intelligence](docs/screenshots/03-evidence.png)
+
+### DNS Intelligence
+![DNS Intelligence](docs/screenshots/04-dns.png)
+
+### Investigation Archive
+![Investigation Archive](docs/screenshots/05-archive.png)
+
+### Analytics Dashboard
+![Analytics Dashboard](docs/screenshots/06-analytics.png)
+
+## Risk Classification Testing
+
+The screenshots below show actual outputs from local URL
+investigations. These classifications are heuristic results,
+not verified phishing verdicts.
+
+### LOW RISK
+
+![LOW RISK - Part 1](docs/screenshots/testing/low-01.png)
+
+![LOW RISK - Part 2](docs/screenshots/testing/low-02.png)
+
+![LOW RISK - Part 3](docs/screenshots/testing/low-03.png)
+
+### MEDIUM RISK
+
+![MEDIUM RISK - Part 1](docs/screenshots/testing/medium-01.png)
+
+![MEDIUM RISK - Part 2](docs/screenshots/testing/medium-02.png)
+
+![MEDIUM RISK - Part 3](docs/screenshots/testing/medium-03.png)
+
+![MEDIUM RISK - Part 4](docs/screenshots/testing/medium-04.png)
+
+### HIGH RISK
+
+![HIGH RISK - Part 1](docs/screenshots/testing/high-01.png)
+
+![HIGH RISK - Part 2](docs/screenshots/testing/high-02.png)
+
+![HIGH RISK - Part 3](docs/screenshots/testing/high-03.png)
+
+![HIGH RISK - Part 4](docs/screenshots/testing/high-04.png)
+
+## Testing and Evaluation
+
+- Backend: **242 Pytest tests passed**.
+- Security test file: **20 tests passed** (included in the 242).
+- Real URL evaluation: 15 samples, all classified LOW RISK.
+- Among them, 10 phishing-labeled dataset samples were classified LOW RISK.
+- These findings highlight the limitations of the V1 heuristic engine.
+
+[Full real URL evaluation](docs/testing/real_url_evaluation.md)
+
+<!-- PHANTOMLINK GALLERY END -->
