@@ -123,10 +123,29 @@ Demonstrates an investigation with stronger or accumulated heuristic indicators.
 
 - Backend: **242 Pytest tests passed**.
 - Security test file: **20 tests passed** (included in the 242).
-- Real URL evaluation: 15 samples, all classified LOW RISK.
+- Real URL evaluation: 100 samples (50 phishing-labeled URLs and 50 legitimate candidates), all classified LOW RISK.
 - Among them, 10 phishing-labeled dataset samples were classified LOW RISK.
 - These findings highlight the limitations of the V1 heuristic engine.
 
 [Full real URL evaluation](docs/testing/real_url_evaluation.md)
 
 <!-- PHANTOMLINK GALLERY END -->
+
+
+
+### 100 Real URL Evaluation
+
+PhantomLink V1 was evaluated offline using 100 real URL samples: 50 phishing-labeled URLs from OpenPhish and 50 legitimate candidates from Tranco.
+
+| Risk Level | Number of URLs |
+|---|---:|
+| LOW RISK | 100 |
+| MEDIUM RISK | 0 |
+| HIGH RISK | 0 |
+
+All 100 URLs were processed without execution errors. However, all 50 phishing-labeled samples were classified LOW RISK, demonstrating a limitation of the current heuristic detection engine.
+
+**Important:** Dataset labels were not independently reverified. This evaluation does not establish the current safety of the URLs.
+
+[View Full 100-URL Evaluation](docs/testing/real_url_evaluation_100.md)
+
