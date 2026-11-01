@@ -131,58 +131,14 @@ Demonstrates an investigation with stronger or accumulated heuristic indicators.
 
 <!-- PHANTOMLINK GALLERY END -->
 
+## Testing & Evaluation
+
+| Test Category | Dataset / Method | Total | LOW | MEDIUM | HIGH | Errors | Report |
+|---|---|---:|---:|---:|---:|---:|---|
+| Real URL Evaluation | 50 OpenPhish + 50 Tranco | 100 | 100 | 0 | 0 | 0 | [Report](docs/testing/real_url_evaluation_100.md) |
+| Medium Risk Demonstration | Synthetic URL Patterns | 68 | 0 | 68 | 0 | 0 | [CSV](docs/testing/medium_risk_68_scenarios.csv) |
+| High Risk Demonstration | Synthetic URL Patterns | 87 | 0 | 0 | 87 | 0 | [CSV](docs/testing/high_risk_87_scenarios.csv) |
+
+**Note:** Real dataset evaluation and synthetic classification demonstrations are separate tests. The 50 phishing-labeled samples were all classified LOW RISK. Synthetic scenarios are not evidence of phishing detection accuracy.
 
 
-### 100 Real URL Evaluation
-
-PhantomLink V1 was evaluated offline using 100 real URL samples: 50 phishing-labeled URLs from OpenPhish and 50 legitimate candidates from Tranco.
-
-| Risk Level | Number of URLs |
-|---|---:|
-| LOW RISK | 100 |
-| MEDIUM RISK | 0 |
-| HIGH RISK | 0 |
-
-All 100 URLs were processed without execution errors. However, all 50 phishing-labeled samples were classified LOW RISK, demonstrating a limitation of the current heuristic detection engine.
-
-**Important:** Dataset labels were not independently reverified. This evaluation does not establish the current safety of the URLs.
-
-[View Full 100-URL Evaluation](docs/testing/real_url_evaluation_100.md)
-
-<!-- CLASSIFICATION TESTS START -->
-
-## Extended Risk Classification Testing
-
-PhantomLink V1 was tested through additional offline heuristic scenarios using multiple real domains and deliberately constructed URL paths.
-
-### Medium Risk Demonstration
-
-- Total scenarios: **68**
-- LOW: **0**
-- MEDIUM: **68**
-- HIGH: **0**
-- Errors: **0**
-
-[View Medium Risk Test Results](docs/testing/medium_risk_68_scenarios.csv)
-
-### High Risk Demonstration
-
-- Total scenarios: **87**
-- LOW: **0**
-- MEDIUM: **0**
-- HIGH: **87**
-- Errors: **0**
-
-[View High Risk Test Results](docs/testing/high_risk_87_scenarios.csv)
-
-### Real-World Dataset Evaluation
-
-A separate evaluation used 100 dataset URLs: 50 phishing-labeled OpenPhish samples and 50 Tranco legitimate candidates.
-
-All 100 samples were classified LOW RISK. This demonstrates a limitation of the current V1 heuristic detector.
-
-[View 100 Real URL Evaluation](docs/testing/real_url_evaluation_100.md)
-
-**Important:** Synthetic classification demonstrations are not measurements of real-world phishing detection accuracy. No target websites were visited during these offline tests.
-
-<!-- CLASSIFICATION TESTS END -->
